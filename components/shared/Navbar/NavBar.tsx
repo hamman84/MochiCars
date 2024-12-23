@@ -38,7 +38,7 @@ export default function NavBar() {
               <UserButton />
             </>
           ) : (
-            <Link href="/signin" className=" flex gap-x-3">
+            <Link href="/sign-in" className=" flex gap-x-3">
                 <Button>
                     Sign In
                     <User className="w-4 h-4 ml-2" />
