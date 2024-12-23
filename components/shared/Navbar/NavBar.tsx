@@ -31,7 +31,7 @@ export default function NavBar() {
           <ModeToggle />
           {userId ? (
             <>
-              <Link href="/loved-cars">
+              <Link href="dashboard/loved-cars">
                 <Heart 
                 strokeWidth={1} 
                 className={`cursor-pointer ${lovedItems.length > 0 && 'fill-black'}`} 

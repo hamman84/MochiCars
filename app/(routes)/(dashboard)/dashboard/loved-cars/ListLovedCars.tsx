@@ -14,7 +14,7 @@ export default function ListLovedCars() {
         {lovedItems.length === 0 ? (
             <h2>There is no loved cars yet</h2>
         ) : (
-            <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+            <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-4">
                     {lovedItems.map((car: Car) => {
                         const { priceDay, photo, cv, engine, transmission, people, type, name, id } = car;
                         const isLoved = lovedItems.some((item) => item.id === id);
