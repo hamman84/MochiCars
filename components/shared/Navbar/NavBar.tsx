@@ -6,6 +6,7 @@ import { useAuth, UserButton } from "@clerk/nextjs"
 import { Heart, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { ModeToggle } from "./ModeToggle"
 
 
 export default function NavBar() {
@@ -27,6 +28,7 @@ export default function NavBar() {
         <div className="flex items-center justify-center gap-x-7">
           <Link href="/cars">List Cars</Link>
           <Link href="/dashboard">Dashboard</Link>
+          <ModeToggle />
           {userId ? (
             <>
               <Link href="/loved-cars">

@@ -55,8 +55,8 @@ export default function CardCar(props: CardCarProps) {
     }
 
   return (
-    <div className="relative p-1 bg-white rounded-lg shadow-md hover:shadow-lg w-80">
-      <div className="relative w-full h-60">
+    <div className="relative p-1 rounded-lg shadow-md hover:shadow-lg w-80 dark:border dark:border-gray-800">
+      <div className="relative w-full h-60 dark:bg-gray-800 bg-gray-200 rounded-lg overflow-hidden">
         <Image
           src={car.photo}
           alt={car.name}

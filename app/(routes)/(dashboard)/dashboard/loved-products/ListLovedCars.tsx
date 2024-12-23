@@ -22,9 +22,9 @@ export default function ListLovedCars() {
                         return (
                           <div
                             key={id}
-                            className="p-1 rounded-lg shadow-md hover:shadow-lg"
+                            className="p-1 rounded-lg shadow-md hover:shadow-lg dark:border dark:border-gray-800 dark:shadow-blue-400"
                           >
-                            <div className="relative w-full h-60">
+                            <div className="relative w-full h-60 dark:bg-gray-500 dark:rounded-lg">
                               <Image
                                 src={photo}
                                 alt={name}

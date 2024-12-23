@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/shared/Navbar/ModeToggle";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { UserButton } from "@clerk/nextjs";
 
@@ -8,9 +9,10 @@ export default function NavbarDashboard() {
             <SidebarTrigger />
         </div>
         <div className="w-full flex items-center justify-center">
-            <h1 className="font-bold text-2xl">NavBar Dashboard</h1>
+            <h1 className="font-bold text-2xl">Dashboard</h1>
         </div>
-        <div className="flex items-center justify-end w-full gap-x-2">
+        <div className="flex items-center justify-end w-full gap-x-6">
+            <ModeToggle />
             <UserButton />
         </div>
     </nav>

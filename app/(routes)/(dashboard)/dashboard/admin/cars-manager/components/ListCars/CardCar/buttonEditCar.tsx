@@ -9,17 +9,15 @@ import {
  } from "@/components/ui/dialog";
  import { Pencil } from "lucide-react";
 import { ButtonEditCarProps } from "./ButtonEditCar.types";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import FormEditCar from "./FormEditCar/FormEditCar";
 
 export default function ButtonEditCar(props: ButtonEditCarProps) {
     const { carData } = props;
-    const [openDialog, setOpenDialog] = useState(false);
   return (
-    <Dialog open={openDialog}>
+    <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" onClick={() => setOpenDialog(true)}>
+        <Button variant="outline">
             Edit
           <Pencil className="h-4 w-4 ml-2" strokeWidth={1} />
         </Button>
@@ -27,7 +25,7 @@ export default function ButtonEditCar(props: ButtonEditCarProps) {
       <DialogContent>
         <DialogHeader>
           <DialogDescription>
-            <FormEditCar carData={carData} setOpenDialog={setOpenDialog} />
+            <FormEditCar carData={carData} />
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

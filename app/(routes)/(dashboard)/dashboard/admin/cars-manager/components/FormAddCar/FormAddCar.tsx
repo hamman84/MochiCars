@@ -19,13 +19,12 @@ import { formSchema } from "./FormAddCar.form";
 import { UploadButton } from "@/utils/uploadthing";
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
-import { FormAddCarProps } from "./FormAddCar.type";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 
 
-export function FormAddCar(props: FormAddCarProps) {
-  const { setOpenDialog } = props;
+export function FormAddCar() {
+  
   const [photoUploaded, setPhotoUploaded] = useState(false);
   const router = useRouter();
 
@@ -45,7 +44,7 @@ export function FormAddCar(props: FormAddCarProps) {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    setOpenDialog(false)
+    
     try {
       await axios.post('/api/car', values)
       toast({

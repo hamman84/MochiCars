@@ -21,7 +21,7 @@ export default function OurFleet() {
                 <div 
                 key={name} 
                 className={cn("rounded-xl py-2 px-3", 
-                active ? "bg-black text-white" : "bg-slate-100")}>
+                active ? "bg-black text-white" : "bg-slate-100 text-black")}>
                     {name}
                 </div>
             ))}

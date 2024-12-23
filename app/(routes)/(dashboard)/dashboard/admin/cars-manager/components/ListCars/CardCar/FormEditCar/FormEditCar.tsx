@@ -30,7 +30,7 @@ import { useRouter } from "next/navigation";
 import { FormEditCarProps } from "./FormEditCar.types";
 
 export default function FormEditCar(props: FormEditCarProps) {
-  const { carData, setOpenDialog } = props;
+  const { carData } = props;
   const [photoUploaded, setPhotoUploaded] = useState(false);
   const router = useRouter();
 
@@ -50,7 +50,7 @@ export default function FormEditCar(props: FormEditCarProps) {
     });
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
-        setOpenDialog(false);
+        
         try {
             await axios.patch(`/api/car/${carData.id}/form`, values);
             toast({

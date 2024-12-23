@@ -81,7 +81,7 @@ export default function CalendarSelector(props: CalendarSelectorProps) {
               mode="range"
               selected={date}
               onSelect={setDate}
-              numberOfMonths={2}
+              numberOfMonths={1}
             />
           </PopoverContent>
         </Popover>
